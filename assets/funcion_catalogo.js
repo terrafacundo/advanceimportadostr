@@ -37,6 +37,28 @@ function generadora_catalogo(y){
 
 }
 
+let entrada ="";
+    //funcion filtrado por barra de búsqueda
+            //tomo el nodo de busqueda y lo normalizo
+        let buscador = document.getElementById("input_busqueda_productos");
+            
+            //asociar lo escrito a un valor
+
+        buscador.addEventListener("keyup", e=>{
+            // e.target.matches("#input_busqueda_productos");
+            // console.log(e.target.value);
+
+            if (e.target.matches("#input_busqueda_productos")){
+            //hasta este punto registra lo ingresado´
+            entrada = e.target.value;
+            }
+            const filtrado_nuevo_array_buscador_por_texto = productos.filter(producto => producto.marca  === entrada.toLowerCase());
+
+
+            console.log(filtrado_nuevo_array_buscador_por_texto);
+            })
+
+
 
     //funcion filtro
 
@@ -77,6 +99,8 @@ function generadora_catalogo(y){
                 const filtrado_nuevo_array = productos.filter(producto=> producto.categoria === valor);
                 generadora_catalogo(filtrado_nuevo_array);
             }
+
+
 
     //instanciando en el DOM
             generadora_catalogo(productos);

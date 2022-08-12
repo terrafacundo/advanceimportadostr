@@ -289,3 +289,64 @@ a:hover{
     transform: scale(1,1)!important;
 }
 
+/* Sector Gaming*/
+
+.rotacion_galeria_gaming{
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.tarjeta_rotacion_galeria_gaming{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.tarjeta_rotacion_galeria_gaming:hover{
+    transform: scale(1.125,1.125);
+
+}
+.tarjeta_rotacion_galeria_gaming img{
+    width: 20vw;
+    height: 40vh;
+}
+
+.tarjeta_rotacion_galeria_gaming h2{
+    color: #1D1D1F;
+}
+
+/* Sector apple*/
+
+.galeria_productos_apple{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.tarjeta_galeria_productos_apple{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.apple_botones_ver_mas{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 6.5vh;
+    width: 7.5vw;
+    background-color:#ffffff;
+    border-style: solid;
+    border-width: 0.5px;
+    border-color: #1D1D1F;
+    border-radius: 20px;
+    color: #1D1D1F;
+}
+
+.contenedor_organizador{
+    position: relative;
+    top: -25vh;
+    left: -12.5vw;
+}

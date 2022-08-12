@@ -16,6 +16,7 @@ productos=[
         precio:2.310,
         descripcion:'15.6¨ QHD IPS 165HZ/I9-11900H/32GB-1TB SSD/RTX 3070 8GB/BACKLIT KEYBOARD/WIN 10/BLACK💻',
         estado:'En stock',
+        marca:'msi',
         tendencia:true,
         categoria:'gaming'},
     {   
