@@ -49,9 +49,8 @@ let entrada ="";
             entrada = buscador.value.toLowerCase();
             console.log(entrada);
 
-            nuevo_Array_buscados=[];
-            console.log('prefuncion= ',nuevo_Array_buscados);
-            
+            //lo instancio el array, y despues pusheo
+            nuevo_Array_buscados=[];            
 
             productos.forEach((item)=>{
                 let parametro = item.nombre;
@@ -64,7 +63,14 @@ let entrada ="";
                     contenedor_productos_catalogo.innerHTML="";
                 }
             })
-            generadora_catalogo(nuevo_Array_buscados)
+            generadora_catalogo(nuevo_Array_buscados);
+
+            //funcion que se encarga de aclarar la nulidad del contenido
+            if (contenedor_productos_catalogo.innerHTML==""){
+                let error_busqueda= document.createElement("h2");
+                error_busqueda.innerHTML="Producto/s no encontrado.";
+                contenedor_productos_catalogo.append(error_busqueda);
+            }
         }
 
             
@@ -86,16 +92,7 @@ let entrada ="";
         //     })
 
 
-
-
-
-
-
-
-
-
-
-    //funcion filtro
+    //funcion filtro por categoria
 
             //asignacion de botones a nodos
             let filtro_all = document.getElementById('boton_todos');
