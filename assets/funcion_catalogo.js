@@ -40,23 +40,58 @@ function generadora_catalogo(y){
 let entrada ="";
     //funcion filtrado por barra de búsqueda
             //tomo el nodo de busqueda y lo normalizo
-        let buscador = document.getElementById("input_busqueda_productos");
+        let buscador = document.getElementById("input_busqueda_productos");        
+
+        buscador.addEventListener('input', filtrado_por_buscador)
+
+        function filtrado_por_buscador(){
+            contenedor_productos_catalogo.innerHTML="";
+            entrada = buscador.value.toLowerCase();
+            console.log(entrada);
+
+            nuevo_Array_buscados=[];
+            console.log('prefuncion= ',nuevo_Array_buscados);
+            
+
+            productos.forEach((item)=>{
+                let parametro = item.nombre;
+                if(parametro.toLowerCase().includes(entrada)){
+                    //hasta aca funciona a la perfeccion
+                    contenedor_productos_catalogo.innerHTML="";
+                    nuevo_Array_buscados.push(item);
+                }
+                else{
+                    contenedor_productos_catalogo.innerHTML="";
+                }
+            })
+            generadora_catalogo(nuevo_Array_buscados)
+        }
+
             
             //asociar lo escrito a un valor
 
-        buscador.addEventListener("keyup", e=>{
-            // e.target.matches("#input_busqueda_productos");
-            // console.log(e.target.value);
+        // buscador.addEventListener("keyup", e=>{
+        //     // e.target.matches("#input_busqueda_productos");
+        //     // console.log(e.target.value);
 
-            if (e.target.matches("#input_busqueda_productos")){
-            //hasta este punto registra lo ingresado´
-            entrada = e.target.value;
-            }
-            const filtrado_nuevo_array_buscador_por_texto = productos.filter(producto => producto.marca  === entrada.toLowerCase());
+        //     if (e.target.matches("#input_busqueda_productos")){
+        //     //hasta este punto registra lo ingresado´
+        //     entrada = e.target.value;
+        //     }
+        //     // const filtrado_nuevo_array_buscador_por_texto = productos.filter(producto => producto.marca  === entrada.toLowerCase());
+        //     //funciona pero no con un include
+        //     if entrada.toLowerCase().includes(filter.toLowerCase)
+
+        //     console.log(filtrado_nuevo_array_buscador_por_texto);
+        //     })
 
 
-            console.log(filtrado_nuevo_array_buscador_por_texto);
-            })
+
+
+
+
+
+
 
 
 

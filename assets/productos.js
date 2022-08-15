@@ -26,6 +26,7 @@ productos=[
         precio:1.649,
         descripcion:'15.6¨ FHD WVA/RYZEN 7 5800H/16GB-1TB SSD + 1TB HDD/RTX 3070/WIN 11 HOME/STINGRAY💻',
         estado:'En stock',
+        marca:'lenovo',
         tendencia:true,
         categoria:'notebook'},
     {   
